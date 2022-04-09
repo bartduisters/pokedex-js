@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex JS</title>
+
+    <style>
+      .pokedex {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .pokedex-entry {
+        width: 10rem;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .img-container {
+        background-color: lightgrey;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .img-container img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .type-grass {
+        background-color: #9bcc50;
+      }
+
+      .type-poison {
+        background-color: #b97fc9;
+        color: #ffffff;
+      }
+
+      .type-water {
+        background-color: #4592c4;
+        color: #ffffff;
+      }
+
+      .type-fire {
+        background-color: #f08030;
+        color: #ffffff;
+      }
+
+      .type {
+        padding: 0 1rem;
+        border-radius: 0.25rem;
+      }
+
+      .pokedex-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .type-info {
+        display: flex;
+        gap: 0.25rem;
+      }
+    </style>
+
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <h1>Pokédex</h1>
+
+    <div class="pokedex">
+      <template id="pokemon-template">
+        <div class="pokedex-entry">
+          <div class="img-container">
+            <img
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
+            />
+          </div>
+          <div class="pokedex-info">
+            <div class="number">#001</div>
+            <div class="name">Bulbasaur</div>
+            <div class="type-info">
+              <span class="type type-one">Grass</span>
+              <span class="type type-two">Poison</span>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </body>
+</html>
